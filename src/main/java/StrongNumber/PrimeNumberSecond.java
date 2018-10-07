@@ -11,11 +11,17 @@ public class PrimeNumberSecond {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-
+/*
         long startTime = System.currentTimeMillis();
         printPrimeS(n);
         long endTime = System.currentTimeMillis();
         System.out.println(((double)(endTime - startTime))/1000);
+*/
+        long startErastoTime = System.currentTimeMillis();
+        printErastostenesPrimes(n);
+        long endErastoTime = System.currentTimeMillis();
+        System.out.println(((double)(endErastoTime - startErastoTime))/1000);
+
 
     }
 
@@ -35,15 +41,17 @@ public class PrimeNumberSecond {
     }
 
     private static void printErastostenesPrimes(int n) {
-        boolean[] primes = new boolean[n];
+        boolean[] primes = new boolean[n+1];
         Arrays.fill(primes, true);
 
         for (int i=2; i <= sqrt(n); i++){
-
+            if(primes[i]==true){
+                for(int j = i * i; j <= n; j += i) primes[j] = false;
+            }
         }
 
         for (int i = 1; i <= n; i++) {
-            if(primes[i] = true) {
+            if(primes[i] == true) {
                 System.out.println(i);
             }
         }
