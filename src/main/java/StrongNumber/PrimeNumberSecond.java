@@ -1,6 +1,10 @@
 package StrongNumber;
 
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
+
+import static java.lang.StrictMath.sqrt;
 
 public class PrimeNumberSecond {
 
@@ -25,9 +29,29 @@ public class PrimeNumberSecond {
 
     private static boolean isPrime(int n){
         for(int i = 2; i < n; i++) {
-            if(n%i==0) return false;
+            if(n % i==0) return false;
         }
         return true;
+    }
+
+    private static void printErastostenesPrimes(int n) {
+        boolean[] primes = new boolean[n];
+        Arrays.fill(primes, true);
+
+        for (int i=2; i <= sqrt(n); i++){
+
+        }
+
+        for (int i = 1; i <= n; i++) {
+            if(primes[i] = true) {
+                System.out.println(i);
+            }
+        }
+        /*      To samo co wyżej ale bardziej skomplikowane
+        IntStream.range(1,n)
+                .filter(t -> primes[t] = true)
+                .forEach(System.out::println);
+    */
     }
 
 
