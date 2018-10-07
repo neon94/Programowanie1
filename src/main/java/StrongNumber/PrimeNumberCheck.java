@@ -2,6 +2,8 @@ package StrongNumber;
 
 import java.util.Scanner;
 
+import static java.lang.StrictMath.sqrt;
+
 public class PrimeNumberCheck {
 
 
