@@ -1,8 +1,7 @@
-package StrongNumber;
+package RecuTraning;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 import static java.lang.StrictMath.sqrt;
 

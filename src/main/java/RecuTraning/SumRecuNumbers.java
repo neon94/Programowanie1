@@ -1,4 +1,4 @@
-package StrongNumber;
+package RecuTraning;
 
 import java.util.Scanner;
 
